@@ -1,0 +1,24 @@
+{% extends 'user/layout/base.html' %}
+
+{% block title %}
+ALL POST ABOUT CATEGORY
+{% endblock %}
+
+
+{% block main %}
+<ul>
+    {% for item in posts %}
+    <li>
+        TITLE: {{ item.title }}
+        <br>
+        CONTENT: {{ item.content }}
+        <br>
+        DATA: {{ item.date }}
+        <br>
+        CATEGORY: {{ item.category }}
+        <br>
+        KOMMENT: {{ item.komment }}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

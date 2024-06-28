@@ -1,0 +1,43 @@
+{% extends 'user/layout/base.html' %}
+
+{% block title %}
+ALL CATEROTIES AND AUTHOR
+{% endblock %}
+
+
+{% block main %}
+<div>
+        <h1>CATEROTIES</h1>
+    <ul>
+        {% for cat in category %}
+        <li>
+            <a href="{% url 'info_post_about_cat' cat.id %}">
+                {{ cat.name }}
+            </a>///
+
+            <a href="{% url 'del_category' cat.id %}">удалить</a>
+        </li>
+        {% endfor %}🐱‍🏍🌹🌹🌹🌹🌹🌹🌹🌹🐱‍👓
+        <br>
+        <a href="{% url 'add_category' %}">добавить категорию</a>
+    </ul>
+</div>
+///////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+<div>
+    <h1>AUTHOR</h1>
+<ul>
+    {% for item in authors %}
+    <li>
+        <a href="{% url 'info_post_about_cat' item.id %}">
+            {{ item.name }}
+        </a>///
+
+        <a href="{% url 'del_avtor'  item.id %}">удалить</a>
+    </li>
+    {% endfor %}🐱‍🏍🌹🌹🌹🌹🌹🌹🌹🌹🐱‍👓
+    <br>
+    <a href="{% url 'add_avtor' %}">добавить автора</a>
+</ul>
+</div>
+
+{% endblock %}

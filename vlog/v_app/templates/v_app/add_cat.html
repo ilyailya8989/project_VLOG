@@ -1,0 +1,14 @@
+{% extends 'user/layout/base.html' %}
+
+{% block title %}
+ADD CATEROTIES
+{% endblock %}
+
+
+{% block main %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button>добавить категорию</button>
+    </form>
+{% endblock %}
